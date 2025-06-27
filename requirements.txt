@@ -1,0 +1,6 @@
+torch 
+transformers 
+tf-keras 
+dotenv 
+accelerate
+streamlit
