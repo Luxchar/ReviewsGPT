@@ -5,3 +5,8 @@ dotenv
 accelerate
 streamlit
 openai
+matplotlib
+seaborn
+scikit-learn
+pandas
+nltk
