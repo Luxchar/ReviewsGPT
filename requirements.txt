@@ -4,3 +4,4 @@ tf-keras
 dotenv 
 accelerate
 streamlit
+openai
