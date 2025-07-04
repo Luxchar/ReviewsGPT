@@ -4,7 +4,8 @@ from openai import OpenAI
 # Show title and description.
 st.title("💬 Chatbot")
 st.write(
-    "This is a simple chatbot that uses OpenAI's GPT-3.5 model to generate responses."
+    "This chatbot analyzes customer reviews and responds appropriately based on sentiment. "
+    "Enter a customer review and get a tailored response!"
 )
 
 # Ask user for their OpenAI API key via `st.text_input`.
@@ -21,7 +22,36 @@ else:
     # Create a session state variable to store the chat messages. This ensures that the
     # messages persist across reruns.
     if "messages" not in st.session_state:
-        st.session_state.messages = []
+        st.session_state.messages = [
+            {
+                "role": "system",
+                "content": """You are a customer service representative responding to customer reviews. 
+                
+Your task is to:
+1. Analyze the sentiment of each customer review (positive, negative, or neutral)
+2. Respond appropriately based on the sentiment:
+
+For POSITIVE reviews:
+- Thank the customer warmly
+- Express appreciation for their feedback
+- Encourage them to continue being a valued customer
+- Highlight what they liked if mentioned
+
+For NEGATIVE reviews:
+- Acknowledge their concerns with empathy
+- Apologize sincerely for any inconvenience
+- Offer specific solutions or steps to resolve issues
+- Provide contact information for further assistance
+- Show commitment to improvement
+
+For NEUTRAL reviews:
+- Thank them for their feedback
+- Ask clarifying questions if needed
+- Offer additional assistance or information
+
+Always maintain a professional, helpful, and empathetic tone. Keep responses concise but personalized."""
+            }
+        ]
 
     # Display the existing chat messages via `st.chat_message`.
     for message in st.session_state.messages:
@@ -30,7 +60,7 @@ else:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-    if prompt := st.chat_input("What is up?"):
+    if prompt := st.chat_input("Enter a customer review to get a response..."):
 
         # Store and display the current prompt.
         st.session_state.messages.append({"role": "user", "content": prompt})
