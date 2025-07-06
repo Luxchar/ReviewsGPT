@@ -1,0 +1,42 @@
+{
+  "model_type": "LightGBM_Ultimate",
+  "emotions": [
+    "admiration",
+    "amusement",
+    "anger",
+    "annoyance",
+    "approval",
+    "caring",
+    "confusion",
+    "curiosity",
+    "desire",
+    "disappointment",
+    "disapproval",
+    "disgust",
+    "embarrassment",
+    "excitement",
+    "fear",
+    "gratitude",
+    "grief",
+    "joy",
+    "love",
+    "nervousness",
+    "optimism",
+    "pride",
+    "realization",
+    "relief",
+    "remorse",
+    "sadness",
+    "surprise",
+    "neutral"
+  ],
+  "n_emotions": 28,
+  "training_date": "20250706_060702",
+  "n_trials": 100,
+  "performance_results": {
+    "f1_micro": 0.45924823222925193,
+    "f1_macro": 0.3207905907302915,
+    "f1_weighted": 0.45023441631151756,
+    "hamming_loss": 0.037703698578002286
+  }
+}

@@ -1,0 +1,4 @@
+text,major_emotion,major_confidence,top3_emotion_1,top3_confidence_1,top3_emotion_2,top3_confidence_2,top3_emotion_3,top3_confidence_3,detected_emotions_count
+I love this!,love,0.8824883087622072,love,0.8824883087622072,admiration,0.030815954347570694,curiosity,0.0018818383397715122,1
+This is terrible!,fear,0.2647949769428099,fear,0.2647949769428099,sadness,0.015009888443311262,love,0.0032052567478936416,0
+Amazing surprise!,admiration,0.5496687462070169,admiration,0.5496687462070169,love,0.012334810141940076,curiosity,0.0032658720079139993,1
