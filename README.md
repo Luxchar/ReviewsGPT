@@ -1,4 +1,4 @@
-# CustomGPT - AI Emotion Detection & Chatbot System
+# ReviewsGPT - AI Emotion Detection & Chatbot System
 
 An advanced emotion detection and chatbot system that combines machine learning models with conversational AI to analyze emotions in text and provide intelligent responses.
 
